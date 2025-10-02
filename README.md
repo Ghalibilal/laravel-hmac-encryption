@@ -1,4 +1,4 @@
-# 🔐 Laravel Encryption by Ghalib(Under Development)
+# 🔐 Laravel Encryption by Hazrat Bilal Ghalib
 
 A simple and secure Laravel package for encrypting and decrypting model attributes, queries, and sensitive data using AES-256-CBC with HMAC integrity.
 
@@ -62,12 +62,6 @@ class User extends Model
 }
 
 
-Example:
-$user = new User();
-$user->email = 'secret@example.com';
-$user->save();
-
-echo $user->email; // => 'secret@example.com' (decrypted)
 
 🔍 Query Using Encrypted Values
 User::whereEncrypted('email', '=', 'secret@example.com')->first();

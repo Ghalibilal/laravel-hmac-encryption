@@ -5,6 +5,7 @@ namespace Ghalibilal\LaravelHmacEncryption;
 use Illuminate\Support\ServiceProvider;
 use Ghalibilal\LaravelHmacEncryption\EncryptionService;
 use Ghalibilal\LaravelHmacEncryption\Support\QueryBuilderMacros;
+use Ghalibilal\LaravelHmacEncryption\Console\EncryptionCommand;
 
 class EncryptionServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,10 @@ class EncryptionServiceProvider extends ServiceProvider
     {
         // Allow publishing config
         if ($this->app->runningInConsole()) {
+            // Register Artisan command
+            $this->commands([
+                EncryptionCommand::class,
+            ]);
             $this->publishes([
                 __DIR__.'/../config/encryption.php' => config_path('encryption.php'),
             ], 'config');

@@ -74,6 +74,17 @@ User::whereEncrypted('email', '=', 'secret@example.com')->first();
 User::orWhereEncrypted('phone', '=', '1234567890')->get();
 ```
 
+## 🔑 Artisan Commands
+
+### Encrypt Model Attributes
+
+You can encrypt attributes of a model directly from the terminal using:
+
+```bash
+php artisan encrypt:model --class="App\\Models\\User"
+```
+
+
 
 The package automatically encrypts the value before executing the query.
 

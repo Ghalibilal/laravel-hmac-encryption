@@ -1,0 +1,49 @@
+{
+  "name": "ghalibilal/laravel-hmac-encryption",
+  "version": "1.0.0",
+  "description": "A Laravel encryption package with HMAC integrity check",
+  "keywords": [
+    "Ghalibilal",
+    "laravel-encryption",
+    "laravel-hmac-encryption"
+  ],
+  "homepage": "https://github.com/Ghalibilal/laravel-hmac-encryption",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Hazrat Bilal Ghalib",
+      "email": "hazratbilalghalib@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Ghalibilal\\LaravelHmacEncryption\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Ghalibilal\\LaravelHmacEncryption\\EncryptionServiceProvider"
+      ],
+      "aliases": {
+        "Encryption": "Ghalibilal\\LaravelHmacEncryption\\Facades\\Encryption"
+      }
+    }
+  },
+  "require": {
+    "php": "^8.1|^8.2|^8.3",
+    "laravel/framework": "^9.0|^10.0|^11.0|^12.0",
+     "illuminate/support": "^9.0|^10.0|^11.0|^12.0",
+     "ghalibilal/laravel-hmac-encryption": "dev-main"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/ghalibilal/laravel-hmac-encryption"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

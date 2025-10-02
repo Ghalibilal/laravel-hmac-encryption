@@ -19,7 +19,7 @@ A simple and secure Laravel package for encrypting and decrypting model attribut
 ## 🚀 Installation
 
 ```bash
-composer require ghalibilal/laravel-hmac-encryption
+composer require ghalibilal/laravel-hmac-encryption:dev-main
 ```
 
 Then publish the configuration file:
